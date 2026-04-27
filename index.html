@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+            <div class="card">
+                <h1 class="quiz-title">Online Quiz Challenge</h1>
+                <p class="quiz-description">Test your knowledge with our interactive quiz! Answer questions within the time limit and aim for the highest score.</p>
+                <button id="start-btn" class="btn primary-btn">Start Quiz</button>
+                <div class="high-score">
+                    <span id="high-score-display">High Score: 0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="card">
+                <div class="quiz-header">
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div id="progress-fill" class="progress-fill"></div>
+                        </div>
+                        <span id="progress-text" class="progress-text">Question 1 of 15</span>
+                    </div>
+                    <div class="timer-container">
+                        <div class="timer-circle">
+                            <span id="timer-text" class="timer-text">15</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="question-container" class="question-container">
+                    <h2 id="question-text" class="question-text"></h2>
+                    <div id="options-container" class="options-container"></div>
+                </div>
+                <button id="next-btn" class="btn secondary-btn" disabled>Next Question</button>
+            </div>
+        </div>
+        <br><br>
+        <!-- Quiz Screen -->
+<button id="exit-btn" class="btn secondary-btn" style="margin-bottom:15px;">
+    Exit Quiz
+</button>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen">
+            <div class="card">
+                <h1 class="result-title">Quiz Complete!</h1>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="final-score" class="final-score">0</span>
+                        <span class="score-label">Score</span>
+                    </div>
+                </div>
+                <p id="performance-message" class="performance-message"></p>
+                <div class="result-actions">
+                    <button id="restart-btn" class="btn primary-btn">Restart Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" class="dark-mode-toggle">
+        <span class="toggle-icon">🌙</span>
+    </button>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
